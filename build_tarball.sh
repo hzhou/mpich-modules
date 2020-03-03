@@ -1,7 +1,16 @@
-rm -rf build/*
+if -z "$MODULES" ; then
+    MODULES="hwloc izem ucx libfabric json-c"
+fi
+
+if test -d build ; then
+    rm -rf build/*
+else
+    mkdir build
+fi
+
 
 # need preserve the timestamps
-cp -rp hwloc izem ucx libfabric json-c build/
+cp -rp $MODULES build/
 
 cd build
 
@@ -11,4 +20,4 @@ for dir in hwloc izem libfabric json-c ; do
 done
 
 rm -rf */.git
-tar czf ../modules.tar.gz hwloc izem ucx libfabric json-c
+tar czf ../modules.tar.gz $MODULES
