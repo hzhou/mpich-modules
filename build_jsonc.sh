@@ -7,7 +7,9 @@ cd json-c
 git checkout -b build 5e7bbf9d39844cfc54c1821b19da87c3e8a1451d
 
 # sed -i -e 's/lib_LTLIBRARIES/noinst_LTLIBRARIES/' Makefile.am
-sed -i -e 's/const char/char/' strerror_override.c
+if test "$CC" = "suncc" ; then
+	sed -i -e 's/const char/char/' strerror_override.c
+fi
 
 sh autogen.sh
 ./configure --disable-werror
