@@ -1,5 +1,5 @@
-if -z "$MODULES" ; then
-    MODULES="hwloc izem ucx libfabric json-c"
+if test -z "$MODULES" ; then
+    MODULES="hwloc ucx libfabric json-c"
 fi
 
 if test -d build ; then
@@ -15,8 +15,10 @@ cp -rp $MODULES build/
 cd build
 
 # exclude ucx (since it need rebuild on install)
-for dir in hwloc izem libfabric json-c ; do
-    find $dir -name '*.o' |xargs rm -f
+for dir in $MODULES ; do
+    if test "$dir" != "ucx" ; then
+        find $dir -name '*.o' |xargs rm -f
+    fi
 done
 
 rm -rf */.git
