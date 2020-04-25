@@ -1,5 +1,5 @@
 if test -z "$MODULES" ; then
-    MODULES="hwloc ucx libfabric json-c"
+    MODULES="yaksa hwloc ucx libfabric json-c"
 fi
 
 if test -d build ; then
