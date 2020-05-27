@@ -7,7 +7,7 @@ git clone https://github.com/pmodels/yaksa
 cd yaksa
 git checkout -b build $commit
 
-# sed -i -e 's/lib_LTLIBRARIES/noinst_LTLIBRARIES/' Makefile.am
+sed -i -e 's/lib_LTLIBRARIES/noinst_LTLIBRARIES/' Makefile.am
 
 sh autogen.sh
 ./configure
