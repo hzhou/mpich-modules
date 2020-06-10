@@ -1,3 +1,6 @@
+#!/bin/bash
+set -xe
+
 rm -rf yaksa
 
 commit=f4c0ee1b8f147148573b471fe4a6ac3e7644eaba
