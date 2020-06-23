@@ -3,7 +3,8 @@ set -xe
 
 rm -rf yaksa
 
-commit=f4c0ee1b8f147148573b471fe4a6ac3e7644eaba
+# commit=f4c0ee1b8f147148573b471fe4a6ac3e7644eaba
+commit=110f306ac5fc63af3a5d21ed63a70e053a4c483a
 
 git clone https://github.com/pmodels/yaksa
 cd yaksa
