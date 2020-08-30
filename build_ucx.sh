@@ -1,7 +1,7 @@
 #!/bin/bash
 set -xe
 
-commit=5477ae4ff6514bc8e6de66af7c02dfda16579dee
+commit=c1bac6ebd8d075b34f306fa17ea85330ff71103e
 
 rm -rf ucx
 

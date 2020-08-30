@@ -1,7 +1,7 @@
 #!/bin/bash
 set -xe
 
-commit=f535f0f338a58bf6dbe57b7c81c33b78f522b504
+commit=fb27dc6e21bac14754d1b50b57f752e37d475704
 
 rm -rf hwloc
 
