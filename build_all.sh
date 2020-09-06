@@ -1,3 +1,4 @@
+./build_libtool.sh
 ./build_hwloc.sh
 ./build_json-c.sh
 ./build_yaksa.sh

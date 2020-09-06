@@ -2,7 +2,7 @@
 set -xe
 
 if test -z "$MODULES" ; then
-    MODULES="yaksa hwloc ucx libfabric json-c izem"
+    MODULES="libtool yaksa hwloc ucx libfabric json-c izem"
 fi
 
 if test -d build ; then
