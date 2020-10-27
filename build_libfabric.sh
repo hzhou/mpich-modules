@@ -15,3 +15,4 @@ sh autogen.sh
 ./configure --enable-embedded
 make
 
+find . -name '*.la' |xargs --verbose sed -i "s, -pthread,,g"
