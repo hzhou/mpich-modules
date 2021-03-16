@@ -14,6 +14,7 @@ git checkout -b build $commit
 # sed -i -e 's/lib_LTLIBRARIES/noinst_LTLIBRARIES/' Makefile.am
 
 sh autogen.sh
-./configure --enable-embedded
+# take 1 optional configure argument, e.g. --with-cuda=/usr/local/cuda-11.1
+./configure --enable-embedded $1
 make
 
