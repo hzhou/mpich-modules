@@ -15,6 +15,6 @@ if test "$CC" = "suncc" ; then
 fi
 
 sh autogen.sh
-./configure --disable-werror
+./configure --enable-embedded --disable-werror
 make
 
