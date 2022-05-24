@@ -1,6 +1,6 @@
 rm -rf izem
 
-commit=7ab2efa1d35c81e0d90200d2066a22b3abb8db5f
+commit=f65bb810ab2957a4d98a63d5777a1bf206425718
 
 git clone https://github.com/pmodels/izem
 cd izem

@@ -5,7 +5,7 @@ set -xe
 # commit=827a9fe6e6adc3589fd06d14f4c9e04e53d36760
 # commit=ce145450cd19c64dc120ec6723af665498e1c141
 # commit=b2b4e201b68c4992ee1d22812a764c9ad95a96a1
-commit=1e6e14fd88518587204a13a6c9fa3acace73cdc8
+commit=15c1dcb14d84eae903a459c63c095c02533dd92d
 
 rm -rf libfabric
 
@@ -19,7 +19,7 @@ if test $(uname) = "FreeBSD" ; then
 fi
 
 sh autogen.sh
-./configure --enable-embedded --enable-debug $extra_option
+./configure --enable-embedded --enable-debug $extra_option $1
 make
 
 find . -name '*.la' |xargs -t sed -i "s, -pthread,,g"

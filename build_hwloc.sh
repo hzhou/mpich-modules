@@ -3,7 +3,7 @@ set -xe
 
 # commit=fb27dc6e21bac14754d1b50b57f752e37d475704
 # commit=81f40274a0af59f7b3a152a1bae73fe8df09b968
-commit=15a78849f7ea56942fee86cb3e9015ab0973ab54
+commit=89470e32bfb7b9420ab91d4e5fc3fc3bf25feb77
 
 rm -rf hwloc
 
