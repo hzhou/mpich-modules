@@ -12,7 +12,9 @@ else
     ./build_libfabric.sh
     ./build_ucx.sh
 fi
-./build_izem.sh
+# ./build_izem.sh
+
+git clone https://github.com/hzhou/mydef_boot
 
 ./build_tarball.sh
 

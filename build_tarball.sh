@@ -2,7 +2,7 @@
 set -e
 
 if test -z "$MODULES" ; then
-    MODULES="libtool yaksa hwloc ucx libfabric json-c izem"
+    MODULES="libtool yaksa hwloc ucx libfabric json-c mydef_boot"
 fi
 
 echo "Empty build..."
