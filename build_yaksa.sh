@@ -11,7 +11,8 @@ rm -rf yaksa
 # commit=5b169df10e8ab4c876f61dfb1d7a07fb41bb65a6
 # commit=3314e2b65adcae38a372c22434923b3bced2d397
 # commit=0c1fa65715abdfb0370127349c5d1ad99ea60366
-commit=911849b1e2f4a1e769ea8878cab3264d2cf3892d
+# commit=911849b1e2f4a1e769ea8878cab3264d2cf3892d
+commit=9e307612e333a133357030d1b2f3dde4d9d43cce
 
 git clone https://github.com/pmodels/yaksa
 cd yaksa
