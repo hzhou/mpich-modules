@@ -1,5 +1,7 @@
 CUDA=/usr/local/cuda
 
+git clone https://github.com/pmodels/mpich
+
 ./build_libtool.sh
 ./build_hwloc.sh
 ./build_json-c.sh

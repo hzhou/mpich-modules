@@ -12,13 +12,19 @@ rm -rf yaksa
 # commit=3314e2b65adcae38a372c22434923b3bced2d397
 # commit=0c1fa65715abdfb0370127349c5d1ad99ea60366
 # commit=911849b1e2f4a1e769ea8878cab3264d2cf3892d
-commit=9e307612e333a133357030d1b2f3dde4d9d43cce
+# commit=9e307612e333a133357030d1b2f3dde4d9d43cce
 
-git clone https://github.com/pmodels/yaksa
+# git clone https://github.com/pmodels/yaksa
+# cd yaksa
+# git checkout -b build $commit
+if test ! -d mpich ; then
+    git clone https://github.com/pmodels/mpich mpich
+fi
+
+cp -a mpich/src/mpi/datatype/typerep/yaksa .
 cd yaksa
-git checkout -b build $commit
 
-sh autogen.sh
+sh autogen.sh --pup-max-nesting=2
 # take 1 optional configure argument, e.g. --with-cuda=/usr/local/cuda-11.1
 ./configure --enable-embedded --enable-debug $1
 make
