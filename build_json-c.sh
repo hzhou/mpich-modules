@@ -1,7 +1,7 @@
 #!/bin/bash
 set -xe
 
-commit=bb17282c1b87123271d352d307b9077685a05a92
+commit=79ad1c9b9fcc846e6bc31f47b801d11ba6d8613a
 
 rm -rf json-c
 

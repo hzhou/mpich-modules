@@ -9,7 +9,7 @@ set -xe
 # commit=be81fb4bd78e768052587adb10f1b14fb24b5bf0
 # commit=d451a4f14a11154879dc60177eb9a553137d4ef2
 # commit=cd605bae76821fbcdf83e73b594c793f0756968a
-commit=db9ff1bdbdb1d6f70fa216a626face5f6a902a7e
+commit=090c8f066d4a9e54f324a26fb019554512ddd8e0
 
 rm -rf libfabric
 
