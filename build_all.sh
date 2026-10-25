@@ -5,7 +5,6 @@ git clone https://github.com/pmodels/mpich
 
 ./build_libtool.sh
 ./build_hwloc.sh
-./build_json-c.sh
 if test "gpu" = "$1" ; then
     ./build_yaksa.sh --with-cuda=$CUDA
     ./build_libfabric.sh --with-cuda=$CUDA
