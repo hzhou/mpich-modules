@@ -24,7 +24,7 @@ if test $(uname) = "FreeBSD" ; then
 fi
 
 sh autogen.sh
-./configure --enable-embedded --enable-debug $extra_option $1
-make
+./configure --enable-embedded --enable-debug $extra_option "$@"
+make -j${NJOBS:-8}
 
 find . -name '*.la' |xargs -t sed -i "s, -pthread,,g"

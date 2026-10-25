@@ -25,7 +25,7 @@ cp -a mpich/src/mpi/datatype/typerep/yaksa .
 cd yaksa
 
 sh autogen.sh --pup-max-nesting=2
-# take 1 optional configure argument, e.g. --with-cuda=/usr/local/cuda-11.1
-./configure --enable-embedded --enable-debug $1
-make
+# extra configure arguments, e.g. --with-cuda=/usr/local/cuda-11.1
+./configure --enable-embedded --enable-debug "$@"
+make -j${NJOBS:-8}
 

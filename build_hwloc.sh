@@ -14,6 +14,6 @@ git checkout -b build $commit
 
 sh autogen.sh
 export CFLAGS=-fvisibility=hidden
-./configure --enable-embedded-mode --enable-visibility=no --disable-libxml2 --disable-nvml --disable-cuda --disable-opencl --disable-rsmi
-make
+./configure --enable-embedded-mode --enable-visibility=no --disable-libxml2 --disable-nvml --disable-cuda --disable-opencl --disable-rsmi "$@"
+make -j${NJOBS:-8}
 

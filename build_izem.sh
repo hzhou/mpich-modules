@@ -8,4 +8,4 @@ git checkout -b build $commit
 
 sh autogen.sh
 ./configure --enable-embedded
-make
+make -j${NJOBS:-8}

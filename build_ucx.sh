@@ -16,8 +16,8 @@ git checkout -b build $commit
 perl -p -i -e 'if (/^if HAVE_UCG/) {$skip = 1} elsif (/^EXTRA_DIST \+=/) {$skip = 0} if ($skip) {goto LINE}' Makefile.am 
 
 sh autogen.sh
-./configure --prefix=/MODPREFIX --disable-static --disable-numa $1
-make
+./configure --prefix=/MODPREFIX --disable-static --disable-numa "$@"
+make -j${NJOBS:-8}
 find . -name '*.la' |xargs --verbose sed -i "s,$PWD,MODDIR,g"
 cd ..
 touch ucx/need_sed
